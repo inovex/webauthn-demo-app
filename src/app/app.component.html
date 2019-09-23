@@ -1,0 +1,22 @@
+﻿<!-- nav -->
+<nav *ngIf="currentUser" class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" routerLink="/settings">Settings</a>
+        <a (click)="logout()" class="nav-item nav-link">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <app-alert></app-alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- credits: Angular 7 - User Registration and Login Example http://jasonwatmore.com" -->
